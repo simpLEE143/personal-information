@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -6,900 +7,1037 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>My Personal Information</title>
+    <title>My Personal Information</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<style>
+    <style>
 
-    .flying-butterfly {
-        position: fixed;
-        pointer-events: none;
-        z-index: 99999;
-        font-size: 28px;
-        animation: butterflyFly 2.2s ease-out forwards;
-    }
-
-    @keyframes butterflyFly {
-        0% {
-            opacity: 1;
-            transform: translate(0, 0) scale(0.5) rotate(0deg);
+        .flying-butterfly {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99999;
+            font-size: 28px;
+            animation: butterflyFly 2.2s ease-out forwards;
         }
 
-        25% {
-            opacity: 1;
-            transform: translate(var(--move-x1), var(--move-y1)) scale(1) rotate(20deg);
+        @keyframes butterflyFly {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(0.5) rotate(0deg);
+            }
+
+            25% {
+                opacity: 1;
+                transform: translate(var(--move-x1), var(--move-y1)) scale(1) rotate(20deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(var(--move-x2), var(--move-y2)) scale(1.3) rotate(360deg);
+            }
         }
 
-        100% {
-            opacity: 0;
-            transform: translate(var(--move-x2), var(--move-y2)) scale(1.3) rotate(360deg);
-        }
-    }
-
-    .sparkle {
-        position: fixed;
-        pointer-events: none;
-        z-index: 99998;
-        font-size: 20px;
-        animation: sparkleAnimation 1.2s ease-out forwards;
-    }
-
-    @keyframes sparkleAnimation {
-        0% {
-            opacity: 1;
-            transform: scale(0.3) rotate(0deg);
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99998;
+            font-size: 20px;
+            animation: sparkleAnimation 1.2s ease-out forwards;
         }
 
-        100% {
-            opacity: 0;
-            transform: scale(1.5) rotate(180deg);
-        }
-    }
+        @keyframes sparkleAnimation {
+            0% {
+                opacity: 1;
+                transform: scale(0.3) rotate(0deg);
+            }
 
-    .tap-ripple {
-        position: fixed;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 99997;
-        transform: translate(-50%, -50%);
-        animation: rippleAnimation 0.7s ease-out forwards;
-    }
-
-    @keyframes rippleAnimation {
-        0% {
-            opacity: 0.8;
-            transform: translate(-50%, -50%) scale(1);
+            100% {
+                opacity: 0;
+                transform: scale(1.5) rotate(180deg);
+            }
         }
 
-        100% {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(7);
+        .tap-ripple {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99997;
+            transform: translate(-50%, -50%);
+            animation: rippleAnimation 0.7s ease-out forwards;
         }
-    }
 
-</style>
-```
+        @keyframes rippleAnimation {
+            0% {
+                opacity: 0.8;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(7);
+            }
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-```
-<!-- NAVIGATION BAR -->
+    <!-- NAVIGATION BAR -->
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <div class="container">
+        <div class="container">
 
-        <a class="navbar-brand" href="#home">
-            Doralee Bagsit
-        </a>
+            <a class="navbar-brand" href="#home">
+                Doralee Bagsit
+            </a>
 
-        <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-            <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
 
-        </button>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-            <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About Me</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills / Interests</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills / Interests</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
 
-            </ul>
+                </ul>
+
+            </div>
 
         </div>
 
-    </div>
-
-</nav>
+    </nav>
 
 
-<!-- HOME / HERO SECTION -->
+    <!-- HOME / HERO SECTION -->
 
-<section id="home" class="hero">
+    <section id="home" class="hero">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row align-items-center">
+            <div class="row align-items-center">
 
-            <div class="col-md-5 text-center">
+                <div class="col-md-5 text-center">
 
-                <div class="profile-frame">
+                    <div class="profile-frame">
 
-                    <img src="images/profile.jpg"
-                        alt="Profile picture of Doralee Portugal Bagsit"
-                        class="profile-img">
+                        <img src="images/profile.jpg"
+                            alt="Profile picture of Doralee Portugal Bagsit"
+                            class="profile-img">
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-7 text-center text-md-start hero-content">
+
+                    <p class="welcome-text">
+                        Welcome to my personal page
+                    </p>
+
+                    <div class="name-area">
+
+                        <p class="hello-text">
+                            Hello! My name is
+                        </p>
+
+                        <h1>
+                            <span class="my-name">
+                                Doralee Portugal Bagsit
+                            </span>
+                        </h1>
+
+                    </div>
+
+                    <h3>
+                        Information Technology Student
+                    </h3>
+
+                    <p class="intro-text">
+
+                        Welcome to my personal information page!
+                        I am an Information Technology student majoring
+                        in Business Analytics who is interested in learning
+                        technology, creating websites, and developing new skills.
+
+                    </p>
+
+                    <a href="#about" class="btn btn-pink btn-lg">
+                        Learn More About Me
+                    </a>
 
                 </div>
 
             </div>
 
+        </div>
 
-            <div class="col-md-7 text-center text-md-start hero-content">
+    </section>
 
-                <p class="welcome-text">
-                    Welcome to my personal page
+
+    <!-- ABOUT ME SECTION -->
+
+    <section id="about" class="about-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <p class="section-label">
+                    GET TO KNOW ME
                 </p>
 
-                <div class="name-area">
+                <h2>
+                    About Me
+                </h2>
 
-                    <p class="hello-text">
-                        Hello! My name is
-                    </p>
+                <p class="section-description">
 
-                    <h1>
-                        <span class="my-name">
-                            Doralee Portugal Bagsit
-                        </span>
-                    </h1>
-
-                </div>
-
-                <h3>
-                    Information Technology Student
-                </h3>
-
-                <p class="intro-text">
-
-                    Welcome to my personal information page!
-                    I am an Information Technology student majoring
-                    in Business Analytics who is interested in learning
-                    technology, creating websites, and developing new skills.
+                    A little information about my education, interests,
+                    and goals as an Information Technology student.
 
                 </p>
 
-                <a href="#about" class="btn btn-pink btn-lg">
-                    Learn More About Me
-                </a>
-
             </div>
 
-        </div>
 
-    </div>
-
-</section>
+            <div class="row g-4 d-flex">
 
 
-<!-- ABOUT ME SECTION -->
+                <div class="col-md-4">
 
-<section id="about" class="about-section">
+                    <div class="card cute-card about-card">
 
-    <div class="container">
+                        <div class="card-number">
+                            01
+                        </div>
 
-        <div class="section-heading text-center">
+                        <h3>
+                            Education
+                        </h3>
 
-            <p class="section-label">
-                GET TO KNOW ME
-            </p>
+                        <p>
 
-            <h2>
-                About Me
-            </h2>
+                            I am taking a Bachelor of Science in
+                            Information Technology (BSIT), major in
+                            Business Analytics. My studies focus on
+                            technology, data, business, programming,
+                            and web development.
 
-            <p class="section-description">
+                        </p>
 
-                A little information about my education, interests,
-                and goals as an Information Technology student.
-
-            </p>
-
-        </div>
-
-
-        <div class="row g-4 d-flex">
-
-
-            <div class="col-md-4">
-
-                <div class="card cute-card about-card">
-
-                    <div class="card-number">
-                        01
                     </div>
 
-                    <h3>
-                        Education
-                    </h3>
-
-                    <p>
-
-                        I am taking a Bachelor of Science in
-                        Information Technology (BSIT), major in
-                        Business Analytics. My studies focus on
-                        technology, data, business, programming,
-                        and web development.
-
-                    </p>
-
                 </div>
 
-            </div>
 
+                <div class="col-md-4">
 
-            <div class="col-md-4">
+                    <div class="card cute-card about-card">
 
-                <div class="card cute-card about-card">
+                        <div class="card-number">
+                            02
+                        </div>
 
-                    <div class="card-number">
-                        02
+                        <h3>
+                            Interests
+                        </h3>
+
+                        <p>
+
+                            I enjoy learning new technologies,
+                            creating websites, exploring data,
+                            and discovering different IT-related
+                            activities.
+
+                        </p>
+
                     </div>
 
-                    <h3>
-                        Interests
-                    </h3>
-
-                    <p>
-
-                        I enjoy learning new technologies,
-                        creating websites, exploring data,
-                        and discovering different IT-related
-                        activities.
-
-                    </p>
-
                 </div>
 
-            </div>
 
+                <div class="col-md-4">
 
-            <div class="col-md-4">
+                    <div class="card cute-card about-card">
 
-                <div class="card cute-card about-card">
+                        <div class="card-number">
+                            03
+                        </div>
 
-                    <div class="card-number">
-                        03
+                        <h3>
+                            My Goal
+                        </h3>
+
+                        <p>
+
+                            My goal is to improve my technical and
+                            analytical skills and become a successful
+                            IT professional in the future.
+
+                        </p>
+
                     </div>
 
-                    <h3>
-                        My Goal
-                    </h3>
-
-                    <p>
-
-                        My goal is to improve my technical and
-                        analytical skills and become a successful
-                        IT professional in the future.
-
-                    </p>
-
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- SKILLS / INTERESTS SECTION -->
+    <!-- SKILLS / INTERESTS SECTION -->
 
-<section id="skills">
+    <section id="skills">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-heading text-center">
+            <div class="section-heading text-center">
 
-            <p class="section-label">
-                WHAT I CAN DO
-            </p>
+                <p class="section-label">
+                    WHAT I CAN DO
+                </p>
 
-            <h2>
-                Skills / Interests
-            </h2>
+                <h2>
+                    Skills / Interests
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- Web Development -->
+
+                <div class="col-md-4">
+
+                    <div class="card cute-card text-center">
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+
+                            I am interested in creating and designing
+                            websites using HTML, CSS, and JavaScript.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Web Design -->
+
+                <div class="col-md-4">
+
+                    <div class="card cute-card text-center">
+
+                        <h3>
+                            Web Design
+                        </h3>
+
+                        <p>
+
+                            I enjoy creating simple, clean, cute,
+                            and user-friendly website designs.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Business Analytics -->
+
+                <div class="col-md-4">
+
+                    <div class="card cute-card text-center">
+
+                        <h3>
+                            Business Analytics
+                        </h3>
+
+                        <p>
+
+                            I am interested in analyzing data and
+                            learning how technology can help businesses
+                            make better decisions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Acting, Teatro Aliwana & Arts Council -->
+
+                <div class="col-md-4">
+
+                    <div class="card cute-card text-center">
+
+                        <h3>
+                            Acting & Theater Arts
+                        </h3>
+
+                        <p>
+
+                            Acting is one of my passions. I enjoy
+                            performing, expressing emotions, and telling
+                            stories through theater. I am also part of
+                            Teatro Aliwana and the Arts Council, where
+                            I can express my creativity and passion for the arts.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Leadership & Art -->
+
+                <div class="col-md-4">
+
+                    <div class="card cute-card text-center">
+
+                        <h3>
+                            Leadership & Art
+                        </h3>
+
+                        <p>
+
+                            I love being a leader and an artist. I enjoy
+                            inspiring others, working with a team, sharing
+                            ideas, and expressing myself creatively.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Editing -->
+
+                <div class="col-md-4">
+
+                    <div class="card cute-card text-center">
+
+                        <h3>
+                            Editing & Creativity
+                        </h3>
+
+                        <p>
+
+                            I am interested in editing photos, videos,
+                            and creative content. I enjoy using editing
+                            as another way to express my creativity.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
 
         </div>
 
+    </section>
 
-        <div class="row g-4">
 
+    <!-- CONTACT SECTION -->
 
-            <!-- Web Development -->
+    <section id="contact">
 
-            <div class="col-md-4">
+        <div class="container">
 
-                <div class="card cute-card text-center">
+            <div class="section-heading text-center">
 
-                    <h3>
-                        Web Development
-                    </h3>
+                <p class="section-label">
+                    LET'S CONNECT
+                </p>
 
-                    <p>
-
-                        I am interested in creating and designing
-                        websites using HTML, CSS, and JavaScript.
-
-                    </p>
-
-                </div>
+                <h2>
+                    Contact Me
+                </h2>
 
             </div>
 
 
-            <!-- Web Design -->
+            <div class="interactive-box">
 
-            <div class="col-md-4">
+                <form id="contactForm"
+                    action="https://script.google.com/macros/s/AKfycbxsg38yHKCk5eeITeKC4V5N4NccE2mvULPueCkFewBNrXq1400CkzL3j-1j6A70jQmQ/exec"
+                    method="POST">
 
-                <div class="card cute-card text-center">
+                    <div class="mb-3">
 
-                    <h3>
-                        Web Design
-                    </h3>
+                        <label for="fullName" class="form-label">
+                            Full Name
+                        </label>
 
-                    <p>
+                        <input type="text"
+                            class="form-control"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required>
 
-                        I enjoy creating simple, clean, cute,
-                        and user-friendly website designs.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- Business Analytics -->
-
-            <div class="col-md-4">
-
-                <div class="card cute-card text-center">
-
-                    <h3>
-                        Business Analytics
-                    </h3>
-
-                    <p>
-
-                        I am interested in analyzing data and
-                        learning how technology can help businesses
-                        make better decisions.
-
-                    </p>
-
-                </div>
-
-            </div>
+                    </div>
 
 
-            <!-- Acting, Teatro Aliwana & Arts Council -->
+                    <div class="mb-3">
 
-            <div class="col-md-4">
+                        <label for="email" class="form-label">
+                            Email Address
+                        </label>
 
-                <div class="card cute-card text-center">
+                        <input type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
 
-                    <h3>
-                        Acting & Theater Arts
-                    </h3>
-
-                    <p>
-
-                        Acting is one of my passions. I enjoy
-                        performing, expressing emotions, and telling
-                        stories through theater. I am also part of
-                        Teatro Aliwana and the Arts Council, where
-                        I can express my creativity and passion for the arts.
-
-                    </p>
-
-                </div>
-
-            </div>
+                    </div>
 
 
-            <!-- Leadership & Art -->
+                    <div class="mb-3">
 
-            <div class="col-md-4">
+                        <label for="message" class="form-label">
+                            Message
+                        </label>
 
-                <div class="card cute-card text-center">
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message"
+                            required></textarea>
 
-                    <h3>
-                        Leadership & Art
-                    </h3>
+                    </div>
 
-                    <p>
 
-                        I love being a leader and an artist. I enjoy
-                        inspiring others, working with a team, sharing
-                        ideas, and expressing myself creatively.
+                    <div class="text-center">
 
-                    </p>
+                        <button type="submit" class="btn btn-pink">
+                            Send Message
+                        </button>
 
-                </div>
+                    </div>
+
+                </form>
+
+
+                <p id="responseMessage" class="text-center mt-3"></p>
 
             </div>
-
-
-            <!-- Editing -->
-
-            <div class="col-md-4">
-
-                <div class="card cute-card text-center">
-
-                    <h3>
-                        Editing & Creativity
-                    </h3>
-
-                    <p>
-
-                        I am interested in editing photos, videos,
-                        and creative content. I enjoy using editing
-                        as another way to express my creativity.
-
-                    </p>
-
-                </div>
-
-            </div>
-
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
+    <!-- FOOTER -->
 
-<!-- CONTACT SECTION -->
+    <footer>
 
-<section id="contact">
+        <p>
+            Made with care by Doralee Portugal Bagsit
+        </p>
 
-    <div class="container">
+        <p>
+            © 2026 My Personal Information Page
+        </p>
 
-        <div class="section-heading text-center">
+    </footer>
 
-            <p class="section-label">
-                LET'S CONNECT
-            </p>
 
-            <h2>
-                Contact Me
-            </h2>
+    <!-- BOOTSTRAP JAVASCRIPT -->
 
-        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 
-        <div class="interactive-box">
+    <!-- CUSTOM JAVASCRIPT -->
 
-            <form id="contactForm"
-                action="https://script.google.com/macros/s/AKfycbxsg38yHKCk5eeITeKC4V5N4NccE2mvULPueCkFewBNrXq1400CkzL3j-1j6A70jQmQ/exec"
-                method="POST">
+    <script src="script.js"></script>
 
-                <div class="mb-3">
 
-                    <label for="fullName" class="form-label">
-                        Full Name
-                    </label>
+    <!-- TAP SOUND + BUTTERFLY EFFECT -->
 
-                    <input type="text"
-                        class="form-control"
-                        id="fullName"
-                        name="fullName"
-                        placeholder="Enter your full name"
-                        required>
+    <script>
 
-                </div>
+        function playAdventureSound() {
 
+            const AudioContext =
+                window.AudioContext ||
+                window.webkitAudioContext;
 
-                <div class="mb-3">
-
-                    <label for="email" class="form-label">
-                        Email Address
-                    </label>
-
-                    <input type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        required>
-
-                </div>
-
-
-                <div class="mb-3">
-
-                    <label for="message" class="form-label">
-                        Message
-                    </label>
-
-                    <textarea
-                        class="form-control"
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Write your message"
-                        required></textarea>
-
-                </div>
-
-
-                <div class="text-center">
-
-                    <button type="submit" class="btn btn-pink">
-                        Send Message
-                    </button>
-
-                </div>
-
-            </form>
-
-
-            <p id="responseMessage" class="text-center mt-3"></p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <p>
-        Made with care by Doralee Portugal Bagsit
-    </p>
-
-    <p>
-        © 2026 My Personal Information Page
-    </p>
-
-</footer>
-
-
-<!-- BOOTSTRAP JAVASCRIPT -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
-
-<!-- CUSTOM JAVASCRIPT -->
-
-<script src="script.js"></script>
-
-
-<!-- TAP SOUND + BUTTERFLY EFFECT -->
-
-<script>
-
-    function playAdventureSound() {
-
-        const AudioContext =
-            window.AudioContext ||
-            window.webkitAudioContext;
-
-        if (!AudioContext) {
-            return;
-        }
-
-        const audioContext =
-            new AudioContext();
-
-        const notes = [
-            523.25,
-            659.25,
-            783.99,
-            880.00,
-            1046.50
-        ];
-
-        notes.forEach(
-            function (frequency, index) {
-
-                const oscillator =
-                    audioContext.createOscillator();
-
-                const gain =
-                    audioContext.createGain();
-
-                oscillator.type = "sine";
-
-                oscillator.frequency.value =
-                    frequency;
-
-                oscillator.connect(gain);
-
-                gain.connect(
-                    audioContext.destination
-                );
-
-                const startTime =
-                    audioContext.currentTime +
-                    (index * 0.10);
-
-                const endTime =
-                    startTime + 0.16;
-
-                gain.gain.setValueAtTime(
-                    0.0001,
-                    startTime
-                );
-
-                gain.gain.exponentialRampToValueAtTime(
-                    0.12,
-                    startTime + 0.03
-                );
-
-                gain.gain.exponentialRampToValueAtTime(
-                    0.0001,
-                    endTime
-                );
-
-                oscillator.start(
-                    startTime
-                );
-
-                oscillator.stop(
-                    endTime
-                );
-
+            if (!AudioContext) {
+                return;
             }
-        );
 
-    }
+            const audioContext =
+                new AudioContext();
 
-
-    function createButterfly(x, y) {
-
-        const butterfly =
-            document.createElement("div");
-
-        butterfly.className =
-            "flying-butterfly";
-
-        butterfly.innerHTML =
-            "🦋";
-
-        butterfly.style.left =
-            x + "px";
-
-        butterfly.style.top =
-            y + "px";
-
-        const moveX1 =
-            (Math.random() - 0.5) * 160;
-
-        const moveY1 =
-            (Math.random() - 0.8) * 160;
-
-        const moveX2 =
-            (Math.random() - 0.5) * 500;
-
-        const moveY2 =
-            -(Math.random() * 450 + 150);
-
-        butterfly.style.setProperty(
-            "--move-x1",
-            moveX1 + "px"
-        );
-
-        butterfly.style.setProperty(
-            "--move-y1",
-            moveY1 + "px"
-        );
-
-        butterfly.style.setProperty(
-            "--move-x2",
-            moveX2 + "px"
-        );
-
-        butterfly.style.setProperty(
-            "--move-y2",
-            moveY2 + "px"
-        );
-
-        document.body.appendChild(
-            butterfly
-        );
-
-        setTimeout(
-            function () {
-                butterfly.remove();
-            },
-            2300
-        );
-
-    }
-
-
-    function createSparkle(x, y) {
-
-        const sparkle =
-            document.createElement("div");
-
-        sparkle.className =
-            "sparkle";
-
-        const symbols = [
-            "✨",
-            "✦",
-            "✧",
-            "♡"
-        ];
-
-        sparkle.innerHTML =
-            symbols[
-                Math.floor(
-                    Math.random() *
-                    symbols.length
-                )
+            const notes = [
+                523.25,
+                659.25,
+                783.99,
+                880.00,
+                1046.50
             ];
 
-        sparkle.style.left =
-            (
-                x +
-                (Math.random() - 0.5) * 100
-            ) + "px";
+            notes.forEach(
+                function (frequency, index) {
 
-        sparkle.style.top =
-            (
-                y +
-                (Math.random() - 0.5) * 100
-            ) + "px";
+                    const oscillator =
+                        audioContext.createOscillator();
 
-        document.body.appendChild(
-            sparkle
-        );
+                    const gain =
+                        audioContext.createGain();
 
-        setTimeout(
-            function () {
-                sparkle.remove();
-            },
-            1300
-        );
+                    oscillator.type = "sine";
 
-    }
+                    oscillator.frequency.value =
+                        frequency;
 
+                    oscillator.connect(gain);
 
-    function createTapRipple(x, y) {
+                    gain.connect(
+                        audioContext.destination
+                    );
 
-        const ripple =
-            document.createElement("div");
+                    const startTime =
+                        audioContext.currentTime +
+                        (index * 0.10);
 
-        ripple.className =
-            "tap-ripple";
+                    const endTime =
+                        startTime + 0.16;
 
-        ripple.style.left =
-            x + "px";
+                    gain.gain.setValueAtTime(
+                        0.0001,
+                        startTime
+                    );
 
-        ripple.style.top =
-            y + "px";
+                    gain.gain.exponentialRampToValueAtTime(
+                        0.12,
+                        startTime + 0.03
+                    );
 
-        document.body.appendChild(
-            ripple
-        );
+                    gain.gain.exponentialRampToValueAtTime(
+                        0.0001,
+                        endTime
+                    );
 
-        setTimeout(
-            function () {
-                ripple.remove();
-            },
-            800
-        );
+                    oscillator.start(
+                        startTime
+                    );
 
-    }
+                    oscillator.stop(
+                        endTime
+                    );
 
-
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            const x =
-                event.clientX;
-
-            const y =
-                event.clientY;
-
-            playAdventureSound();
-
-            createTapRipple(
-                x,
-                y
+                }
             );
 
-            for (
-                let i = 0;
-                i < 5;
-                i++
-            ) {
+        }
 
-                setTimeout(
-                    function () {
 
-                        createButterfly(
-                            x,
-                            y
-                        );
+        /* =========================================
+           SUCCESS SEND SOUND ONLY 💕
+           THIS IS THE ONLY NEW CODE
+        ========================================= */
 
-                    },
-                    i * 100
-                );
+        function playSuccessSound() {
 
+            const SuccessAudioContext =
+                window.AudioContext ||
+                window.webkitAudioContext;
+
+            if (!SuccessAudioContext) {
+                return;
             }
 
+            const successAudio =
+                new SuccessAudioContext();
 
-            for (
-                let i = 0;
-                i < 6;
-                i++
-            ) {
+            const successNotes = [
+                523.25,
+                659.25,
+                783.99,
+                1046.50,
+                1318.51
+            ];
 
-                setTimeout(
-                    function () {
+            successNotes.forEach(
+                function (frequency, index) {
 
-                        createSparkle(
-                            x,
-                            y
-                        );
+                    const oscillator =
+                        successAudio.createOscillator();
 
-                    },
-                    i * 60
-                );
+                    const gain =
+                        successAudio.createGain();
 
-            }
+                    oscillator.type =
+                        "triangle";
+
+                    oscillator.frequency.value =
+                        frequency;
+
+                    oscillator.connect(gain);
+
+                    gain.connect(
+                        successAudio.destination
+                    );
+
+                    const startTime =
+                        successAudio.currentTime +
+                        (index * 0.14);
+
+                    const endTime =
+                        startTime + 0.45;
+
+                    gain.gain.setValueAtTime(
+                        0.0001,
+                        startTime
+                    );
+
+                    gain.gain.exponentialRampToValueAtTime(
+                        0.18,
+                        startTime + 0.04
+                    );
+
+                    gain.gain.exponentialRampToValueAtTime(
+                        0.0001,
+                        endTime
+                    );
+
+                    oscillator.start(
+                        startTime
+                    );
+
+                    oscillator.stop(
+                        endTime
+                    );
+
+                }
+            );
 
         }
-    );
 
-</script>
-```
+
+        /* =========================================
+           DETECT SUCCESSFUL SEND
+        ========================================= */
+
+        const successMessageElement =
+            document.getElementById(
+                "responseMessage"
+            );
+
+        let successPlayed = false;
+
+        if (successMessageElement) {
+
+            const successObserver =
+                new MutationObserver(
+                    function () {
+
+                        const currentMessage =
+                            successMessageElement
+                                .textContent
+                                .trim();
+
+                        if (
+                            currentMessage.includes(
+                                "Your message has been sent successfully."
+                            )
+                        ) {
+
+                            if (!successPlayed) {
+
+                                successPlayed = true;
+
+                                playSuccessSound();
+
+                            }
+
+                        } else {
+
+                            successPlayed = false;
+
+                        }
+
+                    }
+                );
+
+            successObserver.observe(
+                successMessageElement,
+                {
+                    childList: true,
+                    characterData: true,
+                    subtree: true
+                }
+            );
+
+        }
+
+
+        function createButterfly(x, y) {
+
+            const butterfly =
+                document.createElement("div");
+
+            butterfly.className =
+                "flying-butterfly";
+
+            butterfly.innerHTML =
+                "🦋";
+
+            butterfly.style.left =
+                x + "px";
+
+            butterfly.style.top =
+                y + "px";
+
+            const moveX1 =
+                (Math.random() - 0.5) * 160;
+
+            const moveY1 =
+                (Math.random() - 0.8) * 160;
+
+            const moveX2 =
+                (Math.random() - 0.5) * 500;
+
+            const moveY2 =
+                -(Math.random() * 450 + 150);
+
+            butterfly.style.setProperty(
+                "--move-x1",
+                moveX1 + "px"
+            );
+
+            butterfly.style.setProperty(
+                "--move-y1",
+                moveY1 + "px"
+            );
+
+            butterfly.style.setProperty(
+                "--move-x2",
+                moveX2 + "px"
+            );
+
+            butterfly.style.setProperty(
+                "--move-y2",
+                moveY2 + "px"
+            );
+
+            document.body.appendChild(
+                butterfly
+            );
+
+            setTimeout(
+                function () {
+                    butterfly.remove();
+                },
+                2300
+            );
+
+        }
+
+
+        function createSparkle(x, y) {
+
+            const sparkle =
+                document.createElement("div");
+
+            sparkle.className =
+                "sparkle";
+
+            const symbols = [
+                "✨",
+                "✦",
+                "✧",
+                "♡"
+            ];
+
+            sparkle.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+            sparkle.style.left =
+                (
+                    x +
+                    (Math.random() - 0.5) * 100
+                ) + "px";
+
+            sparkle.style.top =
+                (
+                    y +
+                    (Math.random() - 0.5) * 100
+                ) + "px";
+
+            document.body.appendChild(
+                sparkle
+            );
+
+            setTimeout(
+                function () {
+                    sparkle.remove();
+                },
+                1300
+            );
+
+        }
+
+
+        function createTapRipple(x, y) {
+
+            const ripple =
+                document.createElement("div");
+
+            ripple.className =
+                "tap-ripple";
+
+            ripple.style.left =
+                x + "px";
+
+            ripple.style.top =
+                y + "px";
+
+            document.body.appendChild(
+                ripple
+            );
+
+            setTimeout(
+                function () {
+                    ripple.remove();
+                },
+                800
+            );
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                const x =
+                    event.clientX;
+
+                const y =
+                    event.clientY;
+
+                playAdventureSound();
+
+                createTapRipple(
+                    x,
+                    y
+                );
+
+                for (
+                    let i = 0;
+                    i < 5;
+                    i++
+                ) {
+
+                    setTimeout(
+                        function () {
+
+                            createButterfly(
+                                x,
+                                y
+                            );
+
+                        },
+                        i * 100
+                    );
+
+                }
+
+
+                for (
+                    let i = 0;
+                    i < 6;
+                    i++
+                ) {
+
+                    setTimeout(
+                        function () {
+
+                            createSparkle(
+                                x,
+                                y
+                            );
+
+                        },
+                        i * 60
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
 
 </body>
 
 </html>
+```
