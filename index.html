@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,23 +14,201 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ================================
+           FLYING BUTTERFLIES
+        ================================= */
+
+        .flying-butterfly {
+
+            position: fixed;
+
+            pointer-events: none;
+
+            z-index: 99999;
+
+            font-size: 28px;
+
+            animation:
+                butterflyFly 2.2s ease-out forwards;
+
+        }
+
+
+        @keyframes butterflyFly {
+
+            0% {
+
+                opacity: 1;
+
+                transform:
+                    translate(0, 0)
+                    scale(0.5)
+                    rotate(0deg);
+
+            }
+
+
+            25% {
+
+                opacity: 1;
+
+                transform:
+                    translate(
+                        var(--move-x1),
+                        var(--move-y1)
+                    )
+                    scale(1)
+                    rotate(20deg);
+
+            }
+
+
+            100% {
+
+                opacity: 0;
+
+                transform:
+                    translate(
+                        var(--move-x2),
+                        var(--move-y2)
+                    )
+                    scale(1.3)
+                    rotate(360deg);
+
+            }
+
+        }
+
+
+        /* ================================
+           SPARKLES
+        ================================= */
+
+        .sparkle {
+
+            position: fixed;
+
+            pointer-events: none;
+
+            z-index: 99998;
+
+            font-size: 20px;
+
+            animation:
+                sparkleAnimation 1.2s ease-out forwards;
+
+        }
+
+
+        @keyframes sparkleAnimation {
+
+            0% {
+
+                opacity: 1;
+
+                transform:
+                    scale(0.3)
+                    rotate(0deg);
+
+            }
+
+
+            100% {
+
+                opacity: 0;
+
+                transform:
+                    scale(1.5)
+                    rotate(180deg);
+
+            }
+
+        }
+
+
+        /* ================================
+           TAP RIPPLE
+        ================================= */
+
+        .tap-ripple {
+
+            position: fixed;
+
+            width: 12px;
+
+            height: 12px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            z-index: 99997;
+
+            transform: translate(-50%, -50%);
+
+            animation:
+                rippleAnimation 0.7s ease-out forwards;
+
+        }
+
+
+        @keyframes rippleAnimation {
+
+            0% {
+
+                opacity: 0.8;
+
+                transform:
+                    translate(-50%, -50%)
+                    scale(1);
+
+            }
+
+
+            100% {
+
+                opacity: 0;
+
+                transform:
+                    translate(-50%, -50%)
+                    scale(7);
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Navigation Bar -->
+
+    <!-- =================================
+         NAVIGATION BAR
+    ================================== -->
+
     <nav class="navbar navbar-expand-lg navbar-dark">
+
         <div class="container">
 
             <a class="navbar-brand" href="#home">
                 Doralee Bagsit
             </a>
 
-            <button class="navbar-toggler" type="button"
+
+            <button class="navbar-toggler"
+                type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
                 aria-controls="navbarNav"
@@ -40,42 +219,85 @@
 
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="collapse navbar-collapse"
+                id="navbarNav">
 
                 <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Me</a>
+
+                        <a class="nav-link"
+                            href="#home">
+
+                            Home
+
+                        </a>
+
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills / Interests</a>
-                    </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+
+                        <a class="nav-link"
+                            href="#about">
+
+                            About Me
+
+                        </a>
+
                     </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                            href="#skills">
+
+                            Skills / Interests
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                            href="#contact">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
 
                 </ul>
 
             </div>
 
         </div>
+
     </nav>
 
 
-    <!-- HOME / HERO SECTION -->
-    <section id="home" class="hero">
+
+    <!-- =================================
+         HOME / HERO SECTION
+    ================================== -->
+
+    <section id="home"
+        class="hero">
 
         <div class="container">
 
             <div class="row align-items-center">
 
+
                 <!-- Profile Picture -->
+
                 <div class="col-md-5 text-center">
 
                     <div class="profile-frame">
@@ -89,41 +311,67 @@
                 </div>
 
 
+
                 <!-- Introduction -->
+
                 <div class="col-md-7 text-center text-md-start hero-content">
 
+
                     <p class="welcome-text">
+
                         Welcome to my personal page
+
                     </p>
+
 
                     <div class="name-area">
 
+
                         <p class="hello-text">
+
                             Hello! My name is
+
                         </p>
 
+
                         <h1>
+
                             <span class="my-name">
+
                                 Doralee Portugal Bagsit
+
                             </span>
+
                         </h1>
+
 
                     </div>
 
+
                     <h3>
+
                         Information Technology Student
+
                     </h3>
 
+
                     <p class="intro-text">
+
                         Welcome to my personal information page!
                         I am an Information Technology student majoring
                         in Business Analytics who is interested in learning
                         technology, creating websites, and developing new skills.
+
                     </p>
 
-                    <a href="#about" class="btn btn-pink btn-lg">
+
+                    <a href="#about"
+                        class="btn btn-pink btn-lg">
+
                         Learn More About Me
+
                     </a>
+
 
                 </div>
 
@@ -134,104 +382,158 @@
     </section>
 
 
-    <!-- ABOUT ME SECTION -->
-    <section id="about" class="about-section">
+
+    <!-- =================================
+         ABOUT ME SECTION
+    ================================== -->
+
+    <section id="about"
+        class="about-section">
 
         <div class="container">
 
+
             <div class="section-heading text-center">
 
+
                 <p class="section-label">
+
                     GET TO KNOW ME
+
                 </p>
+
 
                 <h2>
+
                     About Me
+
                 </h2>
 
+
                 <p class="section-description">
+
                     A little information about my education, interests,
                     and goals as an Information Technology student.
+
                 </p>
+
 
             </div>
 
 
+
             <div class="row g-4 d-flex">
 
+
                 <!-- Education -->
+
                 <div class="col-md-4">
 
                     <div class="card cute-card about-card">
 
+
                         <div class="card-number">
+
                             01
+
                         </div>
 
+
                         <h3>
+
                             Education
+
                         </h3>
 
+
                         <p>
+
                             I am taking a Bachelor of Science in
                             Information Technology (BSIT), major in
                             Business Analytics. My studies focus on
                             technology, data, business, programming,
                             and web development.
+
                         </p>
+
 
                     </div>
 
                 </div>
 
 
+
                 <!-- Interests -->
+
                 <div class="col-md-4">
 
                     <div class="card cute-card about-card">
 
+
                         <div class="card-number">
+
                             02
+
                         </div>
 
+
                         <h3>
+
                             Interests
+
                         </h3>
 
+
                         <p>
+
                             I enjoy learning new technologies,
                             creating websites, exploring data,
                             and discovering different IT-related
                             activities.
+
                         </p>
+
 
                     </div>
 
                 </div>
 
 
+
                 <!-- Goal -->
+
                 <div class="col-md-4">
 
                     <div class="card cute-card about-card">
 
+
                         <div class="card-number">
+
                             03
+
                         </div>
 
+
                         <h3>
+
                             My Goal
+
                         </h3>
 
+
                         <p>
+
                             My goal is to improve my technical and
                             analytical skills and become a successful
                             IT professional in the future.
+
                         </p>
+
 
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -240,82 +542,123 @@
     </section>
 
 
-    <!-- SKILLS / INTERESTS SECTION -->
+
+    <!-- =================================
+         SKILLS / INTERESTS SECTION
+    ================================== -->
+
     <section id="skills">
 
         <div class="container">
 
+
             <div class="section-heading text-center">
 
+
                 <p class="section-label">
+
                     WHAT I CAN DO
+
                 </p>
 
+
                 <h2>
+
                     Skills / Interests
+
                 </h2>
+
 
             </div>
 
 
+
             <div class="row g-4">
 
+
                 <!-- Skill 1 -->
+
                 <div class="col-md-4">
 
                     <div class="card cute-card text-center">
 
+
                         <h3>
+
                             Web Development
+
                         </h3>
 
+
                         <p>
+
                             I am interested in creating and designing
                             websites using HTML, CSS, and JavaScript.
+
                         </p>
+
 
                     </div>
 
                 </div>
+
 
 
                 <!-- Skill 2 -->
+
                 <div class="col-md-4">
 
                     <div class="card cute-card text-center">
 
+
                         <h3>
+
                             Web Design
+
                         </h3>
 
+
                         <p>
+
                             I enjoy creating simple, clean, cute,
                             and user-friendly website designs.
+
                         </p>
+
 
                     </div>
 
                 </div>
+
 
 
                 <!-- Skill 3 -->
+
                 <div class="col-md-4">
 
                     <div class="card cute-card text-center">
 
+
                         <h3>
+
                             Business Analytics
+
                         </h3>
 
+
                         <p>
+
                             I am interested in analyzing data and
                             learning how technology can help businesses
                             make better decisions.
+
                         </p>
+
 
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -324,36 +667,57 @@
     </section>
 
 
-    <!-- CONTACT SECTION -->
+
+    <!-- =================================
+         CONTACT SECTION
+    ================================== -->
+
     <section id="contact">
 
         <div class="container">
 
+
             <div class="section-heading text-center">
 
+
                 <p class="section-label">
+
                     LET'S CONNECT
+
                 </p>
 
+
                 <h2>
+
                     Contact Me
+
                 </h2>
+
 
             </div>
 
 
+
             <div class="interactive-box">
 
+
                 <!-- Google Sheets / Apps Script Connection -->
+
                 <form id="contactForm"
                     action="https://script.google.com/macros/s/AKfycbxsg38yHKCk5eeITeKC4V5N4NccE2mvULPueCkFewBNrXq1400CkzL3j-1j6A70jQmQ/exec"
                     method="POST">
 
+
                     <div class="mb-3">
 
-                        <label for="fullName" class="form-label">
+
+                        <label for="fullName"
+                            class="form-label">
+
                             Full Name
+
                         </label>
+
 
                         <input type="text"
                             class="form-control"
@@ -362,14 +726,21 @@
                             placeholder="Enter your full name"
                             required>
 
+
                     </div>
+
 
 
                     <div class="mb-3">
 
-                        <label for="email" class="form-label">
+
+                        <label for="email"
+                            class="form-label">
+
                             Email Address
+
                         </label>
+
 
                         <input type="email"
                             class="form-control"
@@ -378,14 +749,21 @@
                             placeholder="Enter your email"
                             required>
 
+
                     </div>
+
 
 
                     <div class="mb-3">
 
-                        <label for="message" class="form-label">
+
+                        <label for="message"
+                            class="form-label">
+
                             Message
+
                         </label>
+
 
                         <textarea
                             class="form-control"
@@ -395,21 +773,33 @@
                             placeholder="Write your message"
                             required></textarea>
 
+
                     </div>
+
 
 
                     <div class="text-center">
 
-                        <button type="submit" class="btn btn-pink">
+
+                        <button type="submit"
+                            class="btn btn-pink">
+
                             Send Message
+
                         </button>
 
+
                     </div>
+
 
                 </form>
 
 
-                <p id="responseMessage" class="text-center mt-3"></p>
+                <p id="responseMessage"
+                    class="text-center mt-3">
+
+                </p>
+
 
             </div>
 
@@ -418,26 +808,459 @@
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
     <footer>
 
-        <p>
-            Made with care by Doralee Portugal Bagsit
-        </p>
 
         <p>
-            © 2026 My Personal Information Page
+
+            Made with care by Doralee Portugal Bagsit
+
         </p>
+
+
+        <p>
+
+            © 2026 My Personal Information Page
+
+        </p>
+
 
     </footer>
 
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JavaScript -->
+    <!-- =================================
+         BOOTSTRAP JAVASCRIPT
+    ================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+
+    <!-- =================================
+         CUSTOM JAVASCRIPT
+    ================================== -->
+
     <script src="script.js"></script>
+
+
+
+    <!-- =================================
+         TAP SOUND + BUTTERFLY EFFECT
+    ================================== -->
+
+    <script>
+
+
+        /* ==================================
+           ADVENTURE SOUND
+        ================================== */
+
+        function playAdventureSound() {
+
+
+            const AudioContext =
+                window.AudioContext ||
+                window.webkitAudioContext;
+
+
+            if (!AudioContext) {
+
+                return;
+
+            }
+
+
+            const audioContext =
+                new AudioContext();
+
+
+            const notes = [
+
+                523.25,
+                659.25,
+                783.99,
+                880.00,
+                1046.50
+
+            ];
+
+
+            notes.forEach(
+                function (frequency, index) {
+
+
+                    const oscillator =
+                        audioContext.createOscillator();
+
+
+                    const gain =
+                        audioContext.createGain();
+
+
+                    oscillator.type =
+                        "sine";
+
+
+                    oscillator.frequency.value =
+                        frequency;
+
+
+                    oscillator.connect(gain);
+
+                    gain.connect(
+                        audioContext.destination
+                    );
+
+
+                    const startTime =
+                        audioContext.currentTime +
+                        (index * 0.10);
+
+
+                    const endTime =
+                        startTime + 0.16;
+
+
+                    gain.gain.setValueAtTime(
+                        0.0001,
+                        startTime
+                    );
+
+
+                    gain.gain.exponentialRampToValueAtTime(
+                        0.12,
+                        startTime + 0.03
+                    );
+
+
+                    gain.gain.exponentialRampToValueAtTime(
+                        0.0001,
+                        endTime
+                    );
+
+
+                    oscillator.start(
+                        startTime
+                    );
+
+
+                    oscillator.stop(
+                        endTime
+                    );
+
+
+                }
+            );
+
+
+        }
+
+
+
+        /* ==================================
+           CREATE BUTTERFLY
+        ================================== */
+
+        function createButterfly(x, y) {
+
+
+            const butterfly =
+                document.createElement("div");
+
+
+            butterfly.className =
+                "flying-butterfly";
+
+
+            butterfly.innerHTML =
+                "🦋";
+
+
+            butterfly.style.left =
+                x + "px";
+
+
+            butterfly.style.top =
+                y + "px";
+
+
+            /*
+                Random direction
+            */
+
+            const moveX1 =
+                (Math.random() - 0.5) * 160;
+
+
+            const moveY1 =
+                (Math.random() - 0.8) * 160;
+
+
+            const moveX2 =
+                (Math.random() - 0.5) * 500;
+
+
+            const moveY2 =
+                -(Math.random() * 450 + 150);
+
+
+            butterfly.style.setProperty(
+                "--move-x1",
+                moveX1 + "px"
+            );
+
+
+            butterfly.style.setProperty(
+                "--move-y1",
+                moveY1 + "px"
+            );
+
+
+            butterfly.style.setProperty(
+                "--move-x2",
+                moveX2 + "px"
+            );
+
+
+            butterfly.style.setProperty(
+                "--move-y2",
+                moveY2 + "px"
+            );
+
+
+            document.body.appendChild(
+                butterfly
+            );
+
+
+            setTimeout(
+                function () {
+
+                    butterfly.remove();
+
+                },
+                2300
+            );
+
+        }
+
+
+
+        /* ==================================
+           CREATE SPARKLE
+        ================================== */
+
+        function createSparkle(x, y) {
+
+
+            const sparkle =
+                document.createElement("div");
+
+
+            sparkle.className =
+                "sparkle";
+
+
+            const symbols = [
+
+                "✨",
+                "✦",
+                "✧",
+                "♡"
+
+            ];
+
+
+            sparkle.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+
+            sparkle.style.left =
+                (
+                    x +
+                    (Math.random() - 0.5) * 100
+                ) + "px";
+
+
+            sparkle.style.top =
+                (
+                    y +
+                    (Math.random() - 0.5) * 100
+                ) + "px";
+
+
+            document.body.appendChild(
+                sparkle
+            );
+
+
+            setTimeout(
+                function () {
+
+                    sparkle.remove();
+
+                },
+                1300
+            );
+
+        }
+
+
+
+        /* ==================================
+           TAP RIPPLE
+        ================================== */
+
+        function createTapRipple(x, y) {
+
+
+            const ripple =
+                document.createElement("div");
+
+
+            ripple.className =
+                "tap-ripple";
+
+
+            ripple.style.left =
+                x + "px";
+
+
+            ripple.style.top =
+                y + "px";
+
+
+            document.body.appendChild(
+                ripple
+            );
+
+
+            setTimeout(
+                function () {
+
+                    ripple.remove();
+
+                },
+                800
+            );
+
+        }
+
+
+
+        /* ==================================
+           ANYWHERE TAP / CLICK
+        ================================== */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+
+                /*
+                    Get exact location
+                    where the user clicked.
+                */
+
+                const x =
+                    event.clientX;
+
+
+                const y =
+                    event.clientY;
+
+
+                /*
+                    Play sound
+                */
+
+                playAdventureSound();
+
+
+                /*
+                    Small tap effect
+                */
+
+                createTapRipple(
+                    x,
+                    y
+                );
+
+
+                /*
+                    Create butterflies
+                */
+
+                for (
+                    let i = 0;
+                    i < 5;
+                    i++
+                ) {
+
+
+                    setTimeout(
+                        function () {
+
+                            createButterfly(
+                                x,
+                                y
+                            );
+
+                        },
+                        i * 100
+                    );
+
+
+                }
+
+
+                /*
+                    Create sparkles
+                */
+
+                for (
+                    let i = 0;
+                    i < 6;
+                    i++
+                ) {
+
+
+                    setTimeout(
+                        function () {
+
+                            createSparkle(
+                                x,
+                                y
+                            );
+
+                        },
+                        i * 60
+                    );
+
+
+                }
+
+
+            }
+        );
+
+
+    </script>
+
 
 </body>
 
 </html>
+```
