@@ -344,7 +344,10 @@
 
             <div class="interactive-box">
 
-                <form id="contactForm">
+                <!-- Google Sheets / Apps Script Connection -->
+                <form id="contactForm"
+                    action="https://script.google.com/macros/s/AKfycbxsg38yHKCk5eeITeKC4V5N4NccE2mvULPueCkFewBNrXq1400CkzL3j-1j6A70jQmQ/exec"
+                    method="POST">
 
                     <div class="mb-3">
 
@@ -355,6 +358,7 @@
                         <input type="text"
                             class="form-control"
                             id="fullName"
+                            name="fullName"
                             placeholder="Enter your full name"
                             required>
 
@@ -370,6 +374,7 @@
                         <input type="email"
                             class="form-control"
                             id="email"
+                            name="email"
                             placeholder="Enter your email"
                             required>
 
@@ -385,6 +390,7 @@
                         <textarea
                             class="form-control"
                             id="message"
+                            name="message"
                             rows="5"
                             placeholder="Write your message"
                             required></textarea>
