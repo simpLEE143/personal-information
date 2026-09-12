@@ -21,6 +21,110 @@
 
     <style>
 
+        /* =========================================
+           SKILLS / INTERESTS PICTURES
+        ========================================= */
+
+        .skill-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================================
+           CARD HOVER ANIMATION ✨
+        ========================================= */
+
+        .cute-card {
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .cute-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================================
+           FUN FACTS SECTION 💕
+        ========================================= */
+
+        .fun-facts-section {
+            padding: 80px 0;
+        }
+
+        .fun-fact-card {
+            height: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            background: #ffffff;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .fun-fact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .fun-fact-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .fun-fact-card h3 {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================================
+           BACK TO TOP BUTTON ⬆️
+        ========================================= */
+
+        #backToTop {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: #e91e63;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #backToTop:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* =========================================
+           BUTTERFLY EFFECT
+        ========================================= */
+
         .flying-butterfly {
             position: fixed;
             pointer-events: none;
@@ -46,6 +150,11 @@
             }
         }
 
+
+        /* =========================================
+           SPARKLE EFFECT
+        ========================================= */
+
         .sparkle {
             position: fixed;
             pointer-events: none;
@@ -65,6 +174,11 @@
                 transform: scale(1.5) rotate(180deg);
             }
         }
+
+
+        /* =========================================
+           TAP RIPPLE
+        ========================================= */
 
         .tap-ripple {
             position: fixed;
@@ -134,6 +248,10 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" href="#fun-facts">Fun Facts</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
 
@@ -188,15 +306,16 @@
                     </div>
 
                     <h3>
-                        Information Technology Student
+                        3rd Year Information Technology Student
                     </h3>
 
                     <p class="intro-text">
 
                         Welcome to my personal information page!
                         I am an Information Technology student majoring
-                        in Business Analytics who is interested in learning
-                        technology, creating websites, and developing new skills.
+                        in Business Analytics. I am interested in
+                        learning technology, creating websites, and
+                        developing new skills.
 
                     </p>
 
@@ -231,8 +350,9 @@
 
                 <p class="section-description">
 
-                    A little information about my education, interests,
-                    and goals as an Information Technology student.
+                    A little information about my education, personal
+                    background, interests, and goals as an Information
+                    Technology student.
 
                 </p>
 
@@ -242,7 +362,9 @@
             <div class="row g-4 d-flex">
 
 
-                <div class="col-md-4">
+                <!-- EDUCATION -->
+
+                <div class="col-md-6 col-lg-3">
 
                     <div class="card cute-card about-card">
 
@@ -256,11 +378,11 @@
 
                         <p>
 
-                            I am taking a Bachelor of Science in
-                            Information Technology (BSIT), major in
-                            Business Analytics. My studies focus on
-                            technology, data, business, programming,
-                            and web development.
+                            I am a Bachelor of Science in
+                            Information Technology (BSIT) student,
+                            major in Business Analytics. My studies
+                            focus on technology, data, business,
+                            programming, and web development.
 
                         </p>
 
@@ -269,12 +391,42 @@
                 </div>
 
 
-                <div class="col-md-4">
+                <!-- PERSONAL INFORMATION -->
+
+                <div class="col-md-6 col-lg-3">
 
                     <div class="card cute-card about-card">
 
                         <div class="card-number">
                             02
+                        </div>
+
+                        <h3>
+                            Personal Information
+                        </h3>
+
+                        <p>
+
+                            <strong>Age:</strong> 20 years old<br>
+                            <strong>Hometown:</strong> Mabalor, Ibaan, Batangas<br>
+                            <strong>Year Level:</strong> 3rd Year<br>
+                            <strong>Course:</strong> BSIT - Business Analytics
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INTERESTS -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card cute-card about-card">
+
+                        <div class="card-number">
+                            03
                         </div>
 
                         <h3>
@@ -295,12 +447,14 @@
                 </div>
 
 
-                <div class="col-md-4">
+                <!-- MY GOAL -->
+
+                <div class="col-md-6 col-lg-3">
 
                     <div class="card cute-card about-card">
 
                         <div class="card-number">
-                            03
+                            04
                         </div>
 
                         <h3>
@@ -318,6 +472,7 @@
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -421,6 +576,10 @@
 
                     <div class="card cute-card text-center">
 
+                        <img src="images/acting.jpg"
+                            alt="Acting and Theater Arts"
+                            class="skill-img">
+
                         <h3>
                             Acting & Theater Arts
                         </h3>
@@ -446,6 +605,10 @@
 
                     <div class="card cute-card text-center">
 
+                        <img src="images/leadership.jpg"
+                            alt="Leadership and Art"
+                            class="skill-img">
+
                         <h3>
                             Leadership & Art
                         </h3>
@@ -469,6 +632,10 @@
 
                     <div class="card cute-card text-center">
 
+                        <img src="images/editing.jpg"
+                            alt="Editing and Creativity"
+                            class="skill-img">
+
                         <h3>
                             Editing & Creativity
                         </h3>
@@ -479,6 +646,141 @@
                             and creative content. I enjoy using editing
                             as another way to express my creativity.
 
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FUN FACTS SECTION -->
+
+    <section id="fun-facts" class="fun-facts-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <p class="section-label">
+                    A LITTLE MORE ABOUT ME
+                </p>
+
+                <h2>
+                    Fun Facts About Me
+                </h2>
+
+                <p class="section-description">
+
+                    Here are a few fun things that make me who I am.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- Fun Fact 1 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card cute-card fun-fact-card text-center">
+
+                        <div class="fun-fact-icon">
+                            🎭
+                        </div>
+
+                        <h3>
+                            Theater Lover
+                        </h3>
+
+                        <p>
+                            I enjoy acting and performing because
+                            theater allows me to express emotions
+                            and tell meaningful stories.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fun Fact 2 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card cute-card fun-fact-card text-center">
+
+                        <div class="fun-fact-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            Creative Person
+                        </h3>
+
+                        <p>
+                            I enjoy art, editing, and creative
+                            activities that allow me to turn ideas
+                            into something visual.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fun Fact 3 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card cute-card fun-fact-card text-center">
+
+                        <div class="fun-fact-icon">
+                            💻
+                        </div>
+
+                        <h3>
+                            Tech Enthusiast
+                        </h3>
+
+                        <p>
+                            I enjoy learning about technology and
+                            discovering new ways to create useful
+                            websites and digital projects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fun Fact 4 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card cute-card fun-fact-card text-center">
+
+                        <div class="fun-fact-icon">
+                            🌟
+                        </div>
+
+                        <h3>
+                            Always Learning
+                        </h3>
+
+                        <p>
+                            I believe that every new experience
+                            is an opportunity to learn, improve,
+                            and grow.
                         </p>
 
                     </div>
@@ -602,6 +904,17 @@
     </footer>
 
 
+    <!-- BACK TO TOP BUTTON -->
+
+    <button id="backToTop"
+        type="button"
+        aria-label="Back to top">
+
+        ↑
+
+    </button>
+
+
     <!-- BOOTSTRAP JAVASCRIPT -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
@@ -696,7 +1009,6 @@
 
         /* =========================================
            SUCCESS SEND SOUND ONLY 💕
-           THIS IS THE ONLY NEW CODE
         ========================================= */
 
         function playSuccessSound() {
@@ -834,6 +1146,10 @@
         }
 
 
+        /* =========================================
+           BUTTERFLY EFFECT
+        ========================================= */
+
         function createButterfly(x, y) {
 
             const butterfly =
@@ -897,6 +1213,10 @@
         }
 
 
+        /* =========================================
+           SPARKLE EFFECT
+        ========================================= */
+
         function createSparkle(x, y) {
 
             const sparkle =
@@ -946,6 +1266,10 @@
         }
 
 
+        /* =========================================
+           TAP RIPPLE
+        ========================================= */
+
         function createTapRipple(x, y) {
 
             const ripple =
@@ -973,6 +1297,54 @@
 
         }
 
+
+        /* =========================================
+           BACK TO TOP BUTTON ⬆️
+        ========================================= */
+
+        const backToTopButton =
+            document.getElementById(
+                "backToTop"
+            );
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 400) {
+
+                    backToTopButton.classList.add(
+                        "show"
+                    );
+
+                } else {
+
+                    backToTopButton.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+
+        backToTopButton.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+        /* =========================================
+           CLICK EFFECTS
+        ========================================= */
 
         document.addEventListener(
             "click",
